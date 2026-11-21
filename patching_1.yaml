@@ -1,2 +1,15 @@
 # This playbook going to patch all services
 # yo
+---
+- name: Patching all services 
+  hosts: salmaan
+  gather_facts: no
+
+  tasks: 
+    - name: patching
+      dnf: 
+        name: '*'
+        state: latest 
+
+
+#editedbyaliza
